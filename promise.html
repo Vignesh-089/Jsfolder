@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // const p=new Promise((resolve,reject)=>
+        // {
+        //     resolve();
+        // });
+        // console.log(p)
+        // p.then("success").catch("error").finally("Correct your problem")
+
+        
+        // const p=new Promise(function(resolve,reject)
+        // {
+        //     setTimeout(()=>
+        //     {
+        //         // const a=data;
+        //         if(a=="data"){
+        //             resolve("Success");
+        //         }
+        //         else{
+        //             reject("error");
+        //         }
+                
+        //     },4000);
+        // })
+        // p.finally(alert("Can we start"))
+        // var a=String(prompt("Enter a value:"));
+        // p.then(result=>{
+        //     alert(result)
+        // }).catch(result=>{
+        //     alert(result)
+        // })
+
+
+        // const p=new Promise((resolve,reject)=>
+        // {
+        //     setTimeout(()=>
+        //     {
+        //         resolve("success");
+        //     },4000)
+        // })
+        // p.finally(alert("started"))
+        // .then(result=>{
+        //     alert(result)
+        // })
+        
+
+        // b=parseInt(prompt("Enter a value:"));
+        // const p=new Promise((resolve,reject)=>
+        // {
+        //     setTimeout(()=>
+        //     {
+                
+        //         var a=data;
+        //         resolve("The given value is correct");
+        //         reject("The given value is incorrect");
+        //     },3000)
+        // })
+        // p.then(result=>{
+        //     console.log(resolve)
+        // }).catch(bug=>{
+        //     console.log(reject)
+        // })/
+
+
+        // async function add(){
+        //     return Promise.resolve("name")
+        // }
+        // add().then(alert)
+
+        async function add(){
+            p=new Promise((resolve,reject)=>
+            {
+                setTimeout(()=>
+                {
+                    resolve("to")
+                },5000)
+            })
+            let x=await p;
+            console.log(x)
+        }
+        add();
+        async function sub(){
+            p=new Promise((resolve,reject)=>
+            {
+                setTimeout(()=>
+                {
+                    resolve("hii")
+                },2000)
+            })
+            let y=await p;
+            console.log(y)
+            
+        }
+        sub()
+        async function mul(){
+            p=new Promise((resolve,reject)=>
+            {
+                setTimeout(()=>
+                {
+                    resolve("party")
+                },6000)
+            })
+            let z=await p;
+            console.log(z)
+            
+        }
+        mul()
+        async function div(){
+            p=new Promise((resolve,reject)=>
+            {
+                setTimeout(()=>
+                {
+                    resolve("welcome")
+                },4000)
+            })
+            let v=await p;
+            console.log(v)
+            
+        }
+        div()
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

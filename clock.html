@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        
+#clock {
+    color: aqua;
+    font-size: 175px;
+    width: 900px;
+    margin: 200px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+    </style>
+    <script>
+       
+setInterval(showTime);
+
+// Defining showTime funcion
+function showTime() {
+	// Getting current time and date
+	let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+	let sec = time.getSeconds();
+	noon = "AM";
+
+	// Setting time for 12 Hrs format
+	if (hour >= 12) {
+		if (hour > 12) hour -= 12;
+		noon = "PM";
+	} else if (hour == 0) {
+		hr = 12;
+		noon = "AM";
+	}
+
+	hour =
+		hour < 10 ? "0" + hour : hour;
+	min = min < 10 ? "0" + min : min;
+	sec = sec < 10 ? "0" + sec : sec;
+
+	let currentTime =hour +":" +min +":" + sec + noon;
+
+	// Displaying the time
+	document.getElementById("clock").innerHTML = currentTime;
+}
+
+showTime();
+
+// setInterval(showTime, 1000);
+// function setTime(){
+//     Time=new Date();
+//     Hour=Time.getHours();
+//     Min=Time.getMinites();
+//     Sec=Time.getSeconds();
+//     noon="AM"
+
+//     if (hour >= 12) {
+// 		if (hour > 12) hour -= 12;
+// 		noon = "PM";
+// 	}
+//     else if(Hour==0){
+//         Hour=12;
+//         noon="AM";
+//     }
+//     Hour=Hour<10 ? "0"+Hour:Hour;
+//     Min=Min<10 ? "0"+Min:Min;
+//     Sec=Sec<10 ? "0"+Sec:Sec;
+
+// let currentTime = Hour +":" +Min +":" +Sec +noon;
+
+//         document.getElementById("clock").innerHTML = currentTime;
+
+// }
+// setTime();
+    </script>
+</head>
+<body>
+    <div id="clock"></div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head1">hello</h1>
+    <input type="text">
+    <script>
+        let headnode=document.getElementById("head1");
+        let inputnode=document.querySelector("input");
+        letters=["h","e","l","o"]
+        inputnode.addEventListener("input",()=>{
+            if(inputnode=letters){
+                headnode.style.color="red";
+            }
+            else{
+                headnode.style.color="black";
+            }
+        });
+
+    </script>
+</body>
+</html> -->
+
+
+
+ <!-- let headnode=document.getElementById("head1");
+ function inputnode(){
+     if(input="h"){
+         headnode.style.color="red";
+     }
+     else{
+         headnode.style.color="black";
+     }
+ } -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Text Color</title>
+</head>
+<body>
+    <div id="textContainer">hello</div>
+
+    <input type="text" id="colorInput">
+    
+    <script>
+        const textContainer = document.getElementById('textContainer');
+        const colorInput = document.getElementById('colorInput');
+
+        function updateTextColor() {
+            const inputText = colorInput.value;
+            let newText = '';
+
+            for (let char of textContainer.textContent) {
+                const lowercaseChar = char.toLowerCase();
+                if (inputText.includes(lowercaseChar)) {
+                    newText += `<span style="color: red;">${char}</span>`;
+                } else {
+                    newText += char;
+                }
+            }
+
+            textContainer.innerHTML = newText; 
+        }
+
+        colorInput.addEventListener('input', updateTextColor);
+    </script>
+</body>
+</html>

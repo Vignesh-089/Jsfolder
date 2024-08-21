@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // fetch("https://jsonplaceholder.typicode.com/")
+    //     .then(Response=>{
+    //         console.log("success");
+    //     })
+    //     .catch(error=>{
+    //         console.error("error");
+    //     });
+        
+
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.log('There was a problem with the fetch operation:', error);
+  });
+
+//post---------------------------
+
+// fetch('https://jsonplaceholder.typicode.com/users/1', {
+//   method: 'GET',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   // body: JSON.stringify({ key: 'value' }),
+//   // body: JSON.stringify({ name: 'vicky' }),
+//   // body: JSON.stringify({ username: 'vickyvicky' }),
+//   // body: JSON.stringify({ email: 'vicky001@gmail.com' }),
+  
+// })
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.error('There was a problem with the fetch operation:', error));
+
+
+
+// colors = [Red,Blue,Green];
+// fetch('colors',{
+//     method: 'PUT',
+
+//     headers:{
+
+//     }
+// })
+
+// ------PUT------------------------------
+
+// const updatedData = {
+//   id: 1,
+//   name: "Vicky",
+//   username: "vigneshvicky",
+//   email: "vicky001@gmail.com",
+//   address: {
+//     street: "My street",
+//     suite: "My suite",
+//     city: "My City",
+//     zipcode: "My Zipcode",
+//     pinnum:"1234",
+//     geo: {
+//       lat: "My Lat",
+//       lng: "My Lng"
+//     }
+//   },
+//   phone:"9345377252",
+//   website:"vicky.org",
+//   company:{
+//     name:"Vicky's company",
+//     catchPhrase:"Multi National Company",
+//     bs:"Creating websites"
+//   }
+// };
+
+
+// fetch('https://jsonplaceholder.typicode.com/users/6', {
+//   method: 'PUT',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify(updatedData)
+// })
+// .then(response => {
+//   if (!response.ok) {
+//     throw new Error('Network response was not ok');
+//   }
+//   return response.json();
+// })
+// .then(data => {
+//   console.log('Resource updated successfully:', data);
+// //  console.log(data)
+// })
+// .catch(error => {
+//   console.error('There was a problem with the PUT request:', error);
+// });
+
+//-------PUT--------------------
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
